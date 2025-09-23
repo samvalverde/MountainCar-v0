@@ -4,7 +4,7 @@ This project implements a Genetic Algorithm (GA) to solve the classic MountainCa
 
 The MountainCar problem consists of driving a car out of a valley by building enough momentum to reach the goal at the top of a hill. Since the engine power is insufficient to go straight up, the agent must learn to move back and forth strategically to succeed.
 
-## 🔬 Project Overview
+## Project Overview
 
 - Chromosome Representation: encodes the parameters of a simple decision policy (e.g., weights for a linear model or a small neural network).
 
@@ -22,7 +22,7 @@ The MountainCar problem consists of driving a car out of a valley by building en
 
 - Evaluation: plots of average and maximum fitness per generation.
 
-## 📊 Deliverables
+## Deliverables
 
 - Source code with modular structure and documentation.
 
@@ -30,7 +30,40 @@ The MountainCar problem consists of driving a car out of a valley by building en
 
 - Technical report analyzing the performance of different GA configurations.
 
-## 📂 Project Structure
+## Execution
+
+1. Install dependencies with Poetry  
+   ```bash
+   poetry install
+   ```
+
+2. Run a single GA experiment (baseline config)  
+   ```bash
+   poetry run python src/main.py
+   ```  
+   Generates:  
+   - `src/experiments/logs.txt`  
+   - `src/experiments/outputs/training_curve.png`
+
+3. Run multiple GA configurations (baseline, high_mutation, large_population)  
+   ```bash
+   poetry run python src/experiments/results.py
+   ```  
+   Generates for each config:  
+   - `fitness_<config>.png`  
+   - `fitness_<config>.csv`  
+   (saved under `src/experiments/outputs/`)
+
+4. Compare results across configurations  
+   ```bash
+   poetry run python src/experiments/compare_results.py
+   ```  
+   Generates:  
+   - `comparison.png`  
+   (saved under `src/experiments/outputs/`)
+
+
+## Project Structure
 
 | File / Folder            | Description                                                                                                      |
 | ------------------------ | ---------------------------------------------------------------------------------------------------------------- |
