@@ -89,7 +89,8 @@ if __name__ == "__main__":
     configs = [
         {"name": "baseline_hidden", "population_size": 30, "mutation_rate": 0.1, "crossover_rate": 0.7},
         {"name": "high_mutation_hidden", "population_size": 30, "mutation_rate": 0.3, "crossover_rate": 0.7},
-        {"name": "large_population_hidden", "population_size": 50, "mutation_rate": 0.1, "crossover_rate": 0.7},
+        {"name": "small_population_hidden", "population_size": 15, "mutation_rate": 0.1, "crossover_rate": 0.7},
+        {"name": "high_crossover_rate_hidden", "population_size": 30, "mutation_rate": 0.1, "crossover_rate": 0.9}
     ]
 
     for config in configs:

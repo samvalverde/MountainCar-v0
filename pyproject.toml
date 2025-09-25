@@ -4,7 +4,8 @@ version = "0.1.0"
 description = "Genetic Algorithm applied to Gymnasium MountainCar-v0"
 authors = ["Your Team <your_email@example.com>"]
 readme = "README.md"
-packages = [{include = "src"}]
+packages = [{include = "src"},
+    { include = "experiments", from = "src" }]
 
 [tool.poetry.dependencies]
 python = "^3.10"
